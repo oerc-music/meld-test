@@ -1,0 +1,107 @@
+{
+	"@context": { 
+		"workset": "http://meld.linkedmusic.org/worksets/",
+		"annotation": "http://meld.linkedmusic.org/annotations/",
+		"meldterm": "http://meld.linkedmusic.org/terms/",
+		"compVocab": "http://meld.linkedmusic.org/companion/vocab",
+		"mei": "http://meld.linkedmusic.org/mei/",
+		"oa": "http://www.w3.org/ns/oa#",
+		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+		"ldp": "http://www.w3.org/ns/ldp#"
+	},
+	"@graph": {
+		"@id": "workset:delius-in-performance",
+		"@type": [
+				"meldterm:workset", 
+				"ldp:Container"
+		],
+		"ldp:contains": [
+			{
+				"@id": "annotation:delius-in-performance_1", 
+				"@type": ["oa:Annotation", "meldterm:topLevel"],
+				"oa:hasTarget": [
+					{ 
+						"@id": "http://meld.linkedmusic.org/companion/mei/Late-Swallows-opening.mei",
+						"@type": "meldterm:MEIManifestation"
+					},
+					{ 
+						"@id": "http://meld.linkedmusic.org/companion/audio/Rheingold-motives.mp3",
+						"@type": "meldterm:AudioManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/tei/delius-in-performance-late-swallows",
+						"@type": "meldterm:TEIManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Kobbe-p28_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Burghold-libretto-motives_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Gribble-p272_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Hadden-p178_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Hamer-p3_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Wolzogen-p21-22_thumb.png",
+						"@type": "meldterm:ImageManifestation"
+					},
+					{
+						"@id": "http://meld.linkedmusic.org/resources/images/Illustration_thumb.jpg",
+						"@type": "meldterm:ImageManifestation"
+					}
+				],
+				"oa:hasBody": [
+					{
+						"@id": "annotation:Rheingold_1_1",
+						"oa:hasTarget": [
+							{
+								"@id": "http://meld.linkedmusic.org/companion/DW_Rh_1"
+							}
+						],
+						"oa:hasBody": [
+							{
+								"@id": "meldterm:emphasis"
+							},
+							{
+								"@id": "meldterm:CueAudio"
+							},
+							{
+								"@id": "meldterm:CueImage"
+							}
+						]
+					},
+					{
+						"@id": "annotation:Rheingold_1_2",
+						"oa:hasTarget": [
+							{
+								"@id": "http://meld.linkedmusic.org/companion/DW_Rh_2"
+							}
+						],
+						"oa:hasBody": [
+							{
+								"@id": "meldterm:highlight"
+							},
+							{
+								"@id": "meldterm:CueAudio"
+							},
+							{
+								"@id": "meldterm:CueImage"
+							}
+						]
+					}
+			  ]
+			} 
+		]
+	}
+}
