@@ -66,7 +66,6 @@ class Score extends Component {
 			// each annotation...
 			const frags = annotation["oa:hasTarget"].map( (annotationTarget) => { 
 				// each annotation target
-				console.log(this.props.score, "oooh");
 				if(annotationTarget["@id"] in this.props.score.componentTargets) {
                     // if this is my target, grab frag ids according to media type
                     const mediaTypes = Object.keys(this.props.score.componentTargets[annotationTarget["@id"]]);

@@ -6,7 +6,9 @@ import thunk from 'redux-thunk';
 import ReduxPromise from 'redux-promise';
 import { Router, Route, browserHistory } from 'react-router'
 
-import reducers from 'meld-client/src/reducers';
+import {reducers, addReducerSet} from 'meld-clients-core/src/reducers';
+import pieceReducers  from './reducers/piece_relations';
+addReducerSet('pieces', pieceReducers);
 import App from './containers/app';
 import ForbiddenQuestion from './containers/musicology/forbiddenQuestion';
 import DeliusEssay from './containers/musicology/deliusInPerformance';

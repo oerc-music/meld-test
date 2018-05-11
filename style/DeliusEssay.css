@@ -30,13 +30,13 @@
 }
 
 div.TEIContainer {
-		right: 0px;
-		padding-right: 30px;
-		top: 0px;
-		padding-top: 15px;
-  width: calc(100% - 800px);
-	height: 100%;
-  font-size: 91%;
+		box-sizing: border-box;
+		margin: 25px;
+		left: 0px;
+		bottom: 0px;
+		width: calc(100%-50);
+		height: 100%;
+		font-size: 91%;
 }
 div.TEIContainer.commentary {
   display: block;
@@ -48,18 +48,83 @@ svg.orchestralRibbon {
 }
 
 div.scorepane {
-  width: 620px;
+		width: 50%;
+		left: 50%;
+		margin-top: 20px;
+		border: 5px solid rgba(64, 64, 64, 0.3);
+		border-radius: 6px;
+		position: absolute;
 }
 .wrapper img {
 		visibility: visible;
-		position: relative;
+		position: absolute;
 		top: 0;
 		left: 0;
-		max-width: 560px;
+		/* max-width: 560px; */
 		height: auto;
-		margin: 0;
+		margin: 15px;
 		padding: 0;
 }
 .wrapper audio {
 		margin: 0;
+}
+audio {
+		left: 50%;
+		position: absolute;
+		top: 0;
+}
+.osd {
+		width: 300;
+		height: 400;
+}
+html, body {
+		background-color: black!important;
+		color: white!important;
+}
+div.scorepane {
+		background-color: white;
+}
+tei-anchor, tei-a {
+		font-weight: bold;
+		font-size: 105%;
+		color: #E76F99;
+		cursor: pointer;
+}
+tei-term {
+		font-style: italic;
+		text-decoration: underline wavy;
+		cursor: pointer;
+}
+tei-term:hover, tei-persName[ref]:hover {
+		color: #EC8EAF;
+}
+tei-anchor:hover, tei-a:hover{
+		text-decoration: underline;
+		color: #EC8EAF;
+}
+tei-persName[ref] {
+		text-decoration: underline wavy;
+		cursor: pointer;
+}
+.TEIContainer.commentary{
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		padding-right:calc(100%-800px);
+}
+
+#defTarget{
+		position: fixed;
+		bottom: 15px;
+		right: 15px;
+		width: 150px;
+		text-style: italic;
+		font-size: 110%;
+		padding: 50px;
+		border-radius: 8px;
+		border: 4px solid rgba(255,223,223,0.2);
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 10;
 }
