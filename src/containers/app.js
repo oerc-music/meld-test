@@ -81,24 +81,24 @@ class App extends Component {
 	}
 	render() { 
 		// Build an array of JSX objects corresponding to the annotation targets in our topLevel
-		var stripHeight = Math.max(this.state.height/4, 250);
+		var stripHeight = Math.min(this.state.height/2, Math.max(this.state.height/3, 300));
 		var scale = 0.25;
 		var vrvOptions = {
-			breaks: 'auto',
-			ignoreLayout: 0,
+			breaks:'auto',
+			useLayout: 0,
+			ignoreLayout: 1,
 			adjustPageHeight:1,
 			spacingStaff: 0,
-			spacingSystem: 4,
+			spacingSystem: 3,
 			spacingLinear: 0.2,
 			spacingNonLinear: 0.55,
-			noFooter: true,
+			noFooter: 1,
 			noHeader: 1,
 			scale: scale*100,
 			pageHeight: (this.state.height - stripHeight - 80) / scale,
 			pageWidth: ((this.state.width -200) / 2 ) / scale - 50
 		}
 		if(this.props.graph.targetsById) { 
-			console.log("Props: ", this.props, this.state);
 			var show = this.props.show;
 			var highlight = this.props.highlight;
       const byId = this.props.graph.targetsById;
@@ -120,6 +120,8 @@ class App extends Component {
 					}
 				}
 			}
+			var imageSet = byId ? Object.keys(byId).filter((x)=> ((show && show.indexOf(x)>-1) && (byId[x].type===ImageManifestation || byId[x].type===MEIManifestation))): [];
+			imageSet.sort((x, y)=>(x.indexOf('.mei')-y.indexOf('.mei'))); // weird, but for now, makes sure images come before scores
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
@@ -129,6 +131,7 @@ class App extends Component {
 						: <div/> }
 					{Object.keys(byId).map( (id) => {
 						var applies = (show && show.indexOf(id)!==-1);
+						var pos = imageSet.indexOf(id);
 					switch(byId[id]["type"]) { 
 						case MEIManifestation:
 							if(applies) {
@@ -139,19 +142,28 @@ class App extends Component {
 						// case IIIFManifestation:
 						// 	return <IIIFImage key={ id } server={ id } height={ stripHeight } width={this.state.width} annotations={ byId[id]["annotations"] } />;
 						case VideoManifestation:
-							return <MediaPlayer key={ id } uri={ id } />;
-						case AudioManifestation: 
-              return <AudioPlayer key={ id } uri={ id } />;
+							if(applies){
+								return <MediaPlayer key={ id } uri={ id } />;
+							}
+						case AudioManifestation:
+							if(applies) {
+								return <AudioPlayer key={ id } uri={ id } />;
+							} else {
+								break;
+							}
 						case ImageManifestation:
-							if(applies) 
-								return <MyImage key={ id } uri={ id } height={ this.state.height - stripHeight -30 } width={this.props.show.length>1 ? (this.state.width-80) / 2 : this.state.width-80} />;
-							else break;
-						case IIIFManifestation:
+							if(applies) {
+								return <MyImage key={ id } uri={ id } height={ this.state.height - stripHeight -100 } pos={pos}
+								       width={imageSet.length>1 ? (this.state.width-150) / 2 : this.state.width-80} />;
+							} else {
+								break;
+							}
+/*						case IIIFManifestation:
 							if(applies) 
 								return <OpenSeaDragonContainer
 							server="https://stacks.stanford.edu/image/iiif"
 							key={ id } id="hg676jb4964%2F0380_796-44"
-							json="info.json" type={'legacy-image-pyramid'} />;
+							json="info.json" type={'legacy-image-pyramid'} />;*/
 							
 					}
 				})}

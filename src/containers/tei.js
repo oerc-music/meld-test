@@ -44,7 +44,6 @@ class TEI extends Component {
 		}
 		if(i==rules.length) {
 			//insert rules
-			console.log(selector+" {display: visible}");
       document.styleSheets[0].insertRule(selector+" {display: visible}");
 			var i=0;
 			while(i<rules.length && (!rules[i].selectorText || rules[i].selectorText.indexOf(selector)===-1)){
@@ -152,7 +151,6 @@ class TEI extends Component {
 	}
 	addHighlight(highlight){
 		var highlightfrag = highlight.substring(highlight.indexOf('#'));
-		console.log("###", highlightfrag);
 		this.setCSSProp('.temporary, '+highlightfrag, {fill: "blue", stroke: "blue !important", color: "blue"});
 	}
 	showHighlights(highlight){
@@ -162,7 +160,6 @@ class TEI extends Component {
 		}
 	}
 	handleMELDActions(annotation, fragments) {
-		console.log("processing annotation: ", annotation, "oa:motivatedBy" in annotation ? annotation["oa:motivatedBy"][0]["@id"] :  "without motive");
 		if("oa:motivatedBy" in annotation){
 			switch(annotation["oa:motivatedBy"][0]["@id"]){
 				case "meldterm:updateViewerState":
