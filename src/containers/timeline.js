@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
-import { fetchTimeline, fetchGraph } from '../../../meld-client/src/actions/index';
+import { fetchTimeline, fetchGraph } from 'meld-clients-core/src/actions/index';
 
 import InlineSVG from 'svg-inline-react';
 
