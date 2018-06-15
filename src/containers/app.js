@@ -13,7 +13,7 @@ import MEICarousel from '../containers/carousel';
 import MEITimeline from '../containers/timeline';
 import TwinControls from '../containers/controls';
 import SingleControls from '../containers/single-view-controls';
-import { OpenSeaDragonContainer } from '../containers/sea';
+//import { OpenSeaDragonContainer } from '../containers/sea';
 import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions/index';
 
 const MEIManifestation = "meldterm:MEIManifestation";
