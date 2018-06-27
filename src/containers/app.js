@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux' ;
 import { bindActionCreators } from 'redux';
-//import IIIFImage from 'react-iiif-image';
 import MediaPlayer from '../components/mediaPlayer';
 import AudioPlayer from '../components/audioPlayer';
-//import ReactOpenSeadragon from 'react-openseadragon';
 
 import Score from 'meld-clients-core/src/containers/score';
 import TEI from '../containers/tei';
 import MyImage from 'meld-clients-core/src/containers/image';
-import MEICarousel from '../containers/carousel';
-import MEITimeline from '../containers/timeline';
-import TwinControls from '../containers/controls';
-import SingleControls from '../containers/single-view-controls';
-//import { OpenSeaDragonContainer } from '../containers/sea';
 import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions/index';
 
 const MEIManifestation = "meldterm:MEIManifestation";
@@ -22,10 +15,6 @@ const IIIFManifestation = "meldterm:IIIFManifestation";
 const VideoManifestation = "meldterm:VideoManifestation";
 const AudioManifestation = "meldterm:AudioManifestation";
 const ImageManifestation = "meldterm:ImageManifestation";
-const Carousel= "meldterm:MEICarousel";
-const CarouselClassic= "meldterm:MEIClassicCarousel";
-const FOR_ORCHESTRA = "http://id.loc.gov/authorities/performanceMediums/2013015516";
-const HAS_PIANO = "http://id.loc.gov/authorities/performanceMediums/2013015550";
 
 class App extends Component { 
 	constructor(props) {
