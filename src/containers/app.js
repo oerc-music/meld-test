@@ -9,6 +9,9 @@ import TEI from '../containers/tei';
 import MyImage from 'meld-clients-core/src/containers/image';
 import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions/index';
 
+import Borealis from 'react-borealis';
+import { config } from '../config'
+
 const MEIManifestation = "meldterm:MEIManifestation";
 const TEIManifestation = "meldterm:TEIManifestation";
 const IIIFManifestation = "meldterm:IIIFManifestation";
@@ -114,7 +117,8 @@ class App extends Component {
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
-					<link rel="stylesheet" href="../style/CETEIcean.css"/>
+					<link rel="stylesheet" href="../style/react-borealis.css"/>
+					<Borealis basename="/foo/bar" config={config} />
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
 						: <div/> }
@@ -174,33 +178,3 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
-
-											/*
-              return <ReactOpenSeadragon basename="https://libimages1.princeton.edu/loris/pudl0001%2F4609321%2Fs42%2F00000001.jp2" osdConfig={ {
-								setStrings: [{name: 'Tooltips.Home', value: 'Reset'}],
-								defaultZoomLevel: 0,
-								tileSources: [
-									'https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json',
-									'https://cdm16022.contentdm.oclc.org/digital/iiif/p16022coll7/326/info.json',
-        'https://cdm16022.contentdm.oclc.org/digital/iiif/nemhc/1542/info.json',
-        'https://cdm16022.contentdm.oclc.org/digital/iiif/hchm/1410/info.json',
-									'https://cdm16022.contentdm.oclc.org/digital/iiif/hchm/1333/info.json',
-									'https://cdm16022.contentdm.oclc.org/digital/iiif/hchm/1332/info.json',
-								],
-							}}
-							pages={[
-      {
-        id: 0,
-        title: 'MLK',
-        sidebarThumbnail: 'https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/full/100,/0/default.jpg',
-        transcript: 'MLK',
-        viewer: 'OSD_VIEWER',
-        cdmCollection: 'mpls',
-        cdmIdentifier: '3188',
-        infoURL: 'https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json',
-      }]} key={ id } />;
-						default: 
-							return <div key={ id }>Unhandled target type: { byId[id]["type"] }</div>
-					}
-				})}
-				</div>*/

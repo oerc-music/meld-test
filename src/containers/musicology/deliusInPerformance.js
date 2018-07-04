@@ -27,6 +27,7 @@ export default class DeliusEssay extends Component {
 		return (
 		  <div> 
 		  	<link rel="stylesheet" href="../../style/DeliusEssay.css" type="text/css" />
+		  	<link rel="stylesheet" href="../../style/react-borealis.css" type="text/css" />
 		  	<App graphUri="http://meld.linkedmusic.org/annotations/delius-in-performance.json-ld"show={show} highlight={highlight}
 			updateViewer={this.updateViewer.bind(this)} definition={this.state.definition}
 			currentDefinition={this.currentDefinition.bind(this)}
