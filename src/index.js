@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import ReduxPromise from 'redux-promise';
-import { Router, Route, browserHistory } from 'react-router'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import {reducers, addReducerSet} from 'meld-clients-core/src/reducers';
 import pieceReducers  from './reducers/piece_relations';
@@ -16,8 +16,8 @@ const createStoreWithMiddleware = applyMiddleware(thunk, ReduxPromise)(createSto
 
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
-		<Router history={browserHistory}> 
+		<BrowserRouter>
 			<Route path="/" component={DeliusEssay} />
-		</Router>
+		</BrowserRouter>
 	</Provider>
 	, document.querySelector('.container'));

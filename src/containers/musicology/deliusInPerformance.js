@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { parse } from 'querystring';
 import App from '../app';
 
 export default class DeliusEssay extends Component { 
@@ -24,6 +25,8 @@ export default class DeliusEssay extends Component {
 	render() {
 		var show = (this.state && this.state.show) ? this.state.show : false;//["https://meld.linkedmusic.org/resources/images/Illustration.jpg"];
 		var highlight = this.state && this.state.highlight ? this.state.highlight : false;
+		const qpars = parse(this.props.location.search.slice(1)); 
+		const annotation = "annotation" in qpars ? qpars["annotation"] : "";
 		return (
 		  <div> 
 		  	<link rel="stylesheet" href="../../style/DeliusEssay.css" type="text/css" />
@@ -32,7 +35,7 @@ export default class DeliusEssay extends Component {
 			updateViewer={this.updateViewer.bind(this)} definition={this.state.definition}
 			currentDefinition={this.currentDefinition.bind(this)}
 			clearDefinition={this.clearDefinition.bind(this)}
-			annotation={ this.props.location.query.annotation } />
+			annotation={ annotation } />
       </div>
 		);
 	}
