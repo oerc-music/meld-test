@@ -21,7 +21,7 @@
     "jsonld": "^0.4.11",
 		"leaflet": "^1.2.0",
     "lodash": "^3.10.1",
-    "meld-clients-core": "oerc-music/meld-clients-core#updateDependencies",
+    "meld-clients-core": "oerc-music/meld-clients-core",
     "n3": "^0.10.0",
     "querystring": "^0.2.0",
     "react": "^16.4.1",
