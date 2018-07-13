@@ -7,6 +7,7 @@ import AudioPlayer from '../components/audioPlayer';
 import Score from 'meld-clients-core/src/containers/score';
 import TEI from '../containers/tei';
 import MyImage from 'meld-clients-core/src/containers/image';
+import IIIF from 'meld-clients-core/src/components/iiif';
 import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions/index';
 
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
@@ -125,13 +126,7 @@ class App extends Component {
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
-					<link rel="stylesheet" href="../style/iiif.css"/>
-					<link rel="stylesheet" href="../style/leaflet.css"/>
-					<Map className="map" center={position} zoom={this.state.iiifZoom} crs={Leaflet.CRS.Simple}>
-						<IIIFTileLayer
-							url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"
-						/>
-					</Map>
+					<IIIF url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"/>
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
 						: <div/> }
