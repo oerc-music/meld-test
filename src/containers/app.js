@@ -131,7 +131,7 @@ class App extends Component {
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
 						: <div/> }
 					{Object.keys(byId).map( (id) => {
-						var applies = (show && show.indexOf(id)!==-1);
+						var applies = true;
 						var pos = imageSet.indexOf(id);
 					switch(byId[id]["type"]) { 
 						case MEIManifestation:

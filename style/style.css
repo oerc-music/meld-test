@@ -368,6 +368,11 @@ tei-span.denominator {
 		margin-left: 10.5px;
 		margin-bottom: -33px;
 }
+div.scorepane, .wrapper img, div.TEIContainer.commentary, audio{
+		position: relative;
+		left: 0;
+}
 
-.map { 
+.map {
+		
 }
