@@ -9,8 +9,8 @@ import TEI from '../containers/tei';
 import MyImage from 'meld-clients-core/src/containers/image';
 import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions/index';
 
-import Borealis from 'react-borealis';
-import { config } from '../config'
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
+import IIIFTileLayer from 'react-leaflet-iiif'
 
 const MEIManifestation = "meldterm:MEIManifestation";
 const TEIManifestation = "meldterm:TEIManifestation";
@@ -18,6 +18,8 @@ const IIIFManifestation = "meldterm:IIIFManifestation";
 const VideoManifestation = "meldterm:VideoManifestation";
 const AudioManifestation = "meldterm:AudioManifestation";
 const ImageManifestation = "meldterm:ImageManifestation";
+const position = [51.505, -0.09]
+
 
 class App extends Component { 
 	constructor(props) {
@@ -117,8 +119,14 @@ class App extends Component {
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
-					<link rel="stylesheet" href="../style/react-borealis.css"/>
-					<Borealis basename="/foo/bar" config={config} />
+					<Map center={position} zoom={13}>
+						<IIIFTileLayer
+							url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"
+						/>
+						<Marker position={position}>
+							<Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
+						</Marker>
+					</Map>
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
 						: <div/> }

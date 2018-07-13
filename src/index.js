@@ -10,6 +10,7 @@ import {reducers, addReducerSet} from 'meld-clients-core/src/reducers';
 import pieceReducers  from './reducers/piece_relations';
 addReducerSet('pieces', pieceReducers);
 import App from './containers/app';
+import Test from './test';
 import DeliusEssay from './containers/musicology/deliusInPerformance';
 
 const createStoreWithMiddleware = applyMiddleware(thunk, ReduxPromise)(createStore);
@@ -17,7 +18,7 @@ const createStoreWithMiddleware = applyMiddleware(thunk, ReduxPromise)(createSto
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
 		<BrowserRouter>
-			<Route path="/" component={DeliusEssay} />
+			<Route path="/" component={Test} />
 		</BrowserRouter>
 	</Provider>
 	, document.querySelector('.container'));
