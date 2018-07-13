@@ -11,6 +11,7 @@ import { fetchGraph, fetchTargetExpression } from 'meld-clients-core/src/actions
 
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import IIIFTileLayer from 'react-leaflet-iiif'
+import Leaflet from 'leaflet'
 
 const MEIManifestation = "meldterm:MEIManifestation";
 const TEIManifestation = "meldterm:TEIManifestation";
@@ -18,12 +19,16 @@ const IIIFManifestation = "meldterm:IIIFManifestation";
 const VideoManifestation = "meldterm:VideoManifestation";
 const AudioManifestation = "meldterm:AudioManifestation";
 const ImageManifestation = "meldterm:ImageManifestation";
-const position = [51.505, -0.09]
 
 
 class App extends Component { 
 	constructor(props) {
 		super(props);
+		this.state = { 
+			iiifLat: 0,
+			iiifLng: 0,
+			iiifZoom:13
+		}
 	}
  
 	componentDidMount() { 
@@ -116,16 +121,16 @@ class App extends Component {
 			}
 			var imageSet = byId ? Object.keys(byId).filter((x)=> ((show && show.indexOf(x)>-1) && (byId[x].type===ImageManifestation || byId[x].type===MEIManifestation))): [];
 			imageSet.sort((x, y)=>(x.indexOf('.mei')-y.indexOf('.mei'))); // weird, but for now, makes sure images come before scores
+			const position = [this.state.iiifLat, this.state.iiifLng];
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
-					<Map center={position} zoom={13}>
+					<link rel="stylesheet" href="../style/iiif.css"/>
+					<link rel="stylesheet" href="../style/leaflet.css"/>
+					<Map className="map" center={position} zoom={this.state.iiifZoom} crs={Leaflet.CRS.Simple}>
 						<IIIFTileLayer
 							url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"
 						/>
-						<Marker position={position}>
-							<Popup>A pretty CSS3 popup.<br />Easily customizable.</Popup>
-						</Marker>
 					</Map>
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
