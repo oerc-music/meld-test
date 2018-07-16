@@ -25,6 +25,12 @@ On a clean install of Ubuntu 18.04:
 * Run the application:
 `npm start`
 
+Testing with self-hosted media resources
+-----
+* Download copies of the served resources above, plus the following RDF/JSON-LD files:
+* Change the URIs
+
+
 Web server configuration:
 ----
 Running the application will start a webserver at localhost:8080 by default. 
