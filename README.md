@@ -1,6 +1,6 @@
 MELD Test application
 =====================
-This repository contains a test application employing [http://github.com/oerc-music/meld](Music Encoding and Linked Data \(MELD\)). The application drawns on Linked Data and resources published elsewhere to create an interactive web resource that could be embedded or linked to from a standard content management system. As such, the application requires network connectivity to function.
+This repository contains a test application employing [Music Encoding and Linked Data (MELD)](http://github.com/oerc-music/meld). The application drawns on Linked Data and resources published elsewhere to create an interactive web resource that could be embedded or linked to from a standard content management system. As such, the application requires network connectivity to function.
 
 Installing
 -----------
