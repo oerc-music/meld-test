@@ -4,7 +4,7 @@
   "description": "MELD Test application",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host localhost"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host localhost --port 8080"
   },
   "author": "Davids Weigl and Lewis, University of Oxford e-Research Centre",
   "license": "BSD-3-Clause",
