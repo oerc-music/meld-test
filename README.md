@@ -25,6 +25,8 @@ On a clean install of Ubuntu 18.04:
 * Run the application:
 `npm start`
 
+Web server configuration:
+----
 This will start a webserver at localhost:8080 by default 
 (this can be changed in `package.json`). 
 The expected way to connect this to an externally visible website is through
