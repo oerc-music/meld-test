@@ -30,13 +30,8 @@
 }
 
 div.TEIContainer {
-		box-sizing: border-box;
-		margin: 25px;
 		left: 0px;
 		bottom: 0px;
-		width: calc(100%-50);
-		height: 100%;
-		font-size: 91%;
 }
 div.TEIContainer.commentary {
   display: block;
@@ -48,22 +43,18 @@ svg.orchestralRibbon {
 }
 
 div.scorepane {
-		width: 47%;
-		left: 50%;
 		margin-top: 20px;
-		border: 5px solid rgba(64, 64, 64, 0.3);
-		border-radius: 6px;
 		position: absolute;
+		display:block;
 }
+
 .wrapper img {
 		visibility: visible;
 		position: absolute;
-		top: 0;
-		left: 0;
+		top: 300px;
+		left: 0px;
 		/* max-width: 560px; */
-		height: auto;
 		margin: 15px;
-		padding: 0;
 }
 .wrapper audio {
 		margin: 0;
@@ -72,6 +63,7 @@ audio {
 		left: 50%;
 		position: absolute;
 		top: 0;
+		display:block;
 }
 .osd {
 		width: 300;
@@ -81,9 +73,7 @@ html, body {
 		background-color: black!important;
 		color: white!important;
 }
-div.scorepane {
-		background-color: white;
-}
+
 tei-anchor, tei-a {
 		font-weight: bold;
 		font-size: 105%;
@@ -140,4 +130,77 @@ tei-persName[ref] {
 		border: 4px solid rgba(255,223,223,0.2);
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: 10;
+}
+
+.score {
+	margin-top:20px;
+	display:block;
+	margin-bottom:5em;
+	background-color:white;
+}
+
+.LeafletWrapper { 
+	margin-bottom:5em;
+}
+
+
+/*MELD-TEST SPECIFIC*/
+/* The remaining CSS are nasty hacks to label the different test elements */
+
+.LeafletWrapper::before{
+	content: "TEST 1: IIIF";
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
+}
+
+.scorepane::before{
+	content: "TEST 2: Score SVG (MEI rendering)";
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
+}
+
+
+.media::before{
+	content: "TEST 3: Video player";
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
+}
+
+.media::after{
+	content: "\a\aTEST 4: Two audio players";
+	white-space:pre;
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
+}
+
+.TEIContainer::before{
+	content: "\a\aTEST 5: HTML Text (TEI rendering)";
+	white-space:pre;
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
+}
+
+.TEIContainer::after{
+	content: "\a\aTest 5: Score images (Non-IIIF; one PNG, three JPGs)";
+	white-space:pre;
+	color:white;
+	font-weight: bold;
+	font-style:italic;
+	padding:5px;
+	font-size: 2em;
 }

@@ -11,50 +11,11 @@
   font-weight: bold;
 }
 
-/* HACK HACK HACK *//*
-.TEIContainer.commentary#F1 {
-	position:absolute;
-	top: 80px;
-	left: 900px;
-}
-
-.TEIContainer.commentary#F9 {
-	position:absolute;
-	top: 80px;
-	left: 900px;
-}
-
-.TEIContainer.commentary#F10 {
-	position:absolute;
-	top: 80px;
-	left: 900px;
-}
-
-.TEIContainer.commentary#F11 {
-	position:absolute;
-	top: 600px;
-	left: 900px;
-}
-
-.TEIContainer#liszt-brief {
-	position:absolute;
-	top:600px;
-	left:50px;
-}
-
-.TEIContainer#liszt-letter{
-	position:absolute;
-	top:600px;
-	left:900px;
-}
-*/
-/* END HACK */
 
 .score .meld-emphasis {
 	fill: red;
 }
 
-/*.score .meld-emphasis.infocus g.note, .score .meld-emphasis.infocus.note{*/
 .score .meld-emphasis.infocus, .score .meld-emphasis.infocus *{
 	cursor:pointer;
   fill: darkorange;
@@ -126,25 +87,10 @@
 	animation-timing-function: linear;*/
 }
 
-.TEIContainer {
-    position:absolute;
-	padding-right: 20px;
-    padding-left:20px;
-  font-size: 94%;
-  overflow-y: scroll;
-}
-
 .scorepane {
-	/*max-height: 250px;*/
-    margin-top:-60px;
-//    margin-left: -50px;
-	max-width: 740px;
+	margin-top:-60px;
+	max-width: 900px;
 	overflow-y:auto;
-}
-.scorepane[id="http://meld.linkedmusic.org/companion/mei/Rheingold2.mei"] {
-	/*max-height: 250px;*/
-    margin-top:-75px;
-    border-top: 1px solid #99A;
 }
 
 /*
