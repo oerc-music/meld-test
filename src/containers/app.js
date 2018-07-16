@@ -126,6 +126,7 @@ class App extends Component {
 			return ( 
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
+					<link rel="stylesheet" href="../style/CETEIcean.css"/>
 					<IIIF url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"/>
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
