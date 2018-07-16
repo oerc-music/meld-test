@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { parse } from 'querystring';
-import App from '../app';
+import App from './app';
 
-export default class DeliusEssay extends Component { 
+export default class MeldTest extends Component { 
 	constructor(props) {
 		super(props);
 		this.state={
@@ -23,13 +23,13 @@ export default class DeliusEssay extends Component {
 		this.setState({definition: false});
 	}
 	render() {
-		var show = (this.state && this.state.show) ? this.state.show : false;//["https://meld.linkedmusic.org/resources/images/Illustration.jpg"];
+		var show = (this.state && this.state.show) ? this.state.show : false;
 		var highlight = this.state && this.state.highlight ? this.state.highlight : false;
 		const qpars = parse(this.props.location.search.slice(1)); 
 		const annotation = "annotation" in qpars ? qpars["annotation"] : "";
 		return (
 		  <div> 
-		  	<link rel="stylesheet" href="../../style/DeliusEssay.css" type="text/css" />
+		  	<link rel="stylesheet" href="../../style/MeldTest.css" type="text/css" />
 		  	<link rel="stylesheet" href="../../style/react-borealis.css" type="text/css" />
 		  	<App graphUri="http://meld.linkedmusic.org/annotations/meld-test.json-ld" show={show} highlight={highlight}
 			updateViewer={this.updateViewer.bind(this)} definition={this.state.definition}

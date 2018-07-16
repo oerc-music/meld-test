@@ -19,7 +19,7 @@
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
     "jsonld": "^0.4.11",
-		"leaflet": "^1.2.0",
+    "leaflet": "^1.2.0",
     "lodash": "^3.10.1",
     "meld-clients-core": "oerc-music/meld-clients-core",
     "n3": "^0.10.0",

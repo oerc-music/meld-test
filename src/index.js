@@ -10,14 +10,14 @@ import {reducers, addReducerSet} from 'meld-clients-core/src/reducers';
 import pieceReducers  from './reducers/piece_relations';
 addReducerSet('pieces', pieceReducers);
 import App from './containers/app';
-import DeliusEssay from './containers/musicology/deliusInPerformance';
+import MeldTest from './containers/meldtest';
 
 const createStoreWithMiddleware = applyMiddleware(thunk, ReduxPromise)(createStore);
 
 ReactDOM.render(
 	<Provider store={createStoreWithMiddleware(reducers)}>
 		<BrowserRouter>
-			<Route path="/" component={DeliusEssay} />
+			<Route path="/" component={MeldTest} />
 		</BrowserRouter>
 	</Provider>
 	, document.querySelector('.container'));
