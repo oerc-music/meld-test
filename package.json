@@ -1,10 +1,10 @@
 {
-  "name": "delius-in-performance",
+  "name": "meld-test",
   "version": "0.0.1",
-  "description": "Musicological digital companion for Lohengrin article",
+  "description": "MELD Test application",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host 127.0.0.1"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host localhost"
   },
   "author": "Davids Weigl and Lewis, University of Oxford e-Research Centre",
   "license": "BSD-3-Clause",
