@@ -30,7 +30,7 @@ Web server configuration:
 Running the application will start a webserver at localhost:8080 by default 
 (this can be changed in `package.json`). 
 The expected way to connect this to an externally visible website is through
-mappings handled by your usual webserver
+mappings handled by your usual webserver.
 
 Expected outcome
 ----------------
