@@ -196,7 +196,7 @@ tei-persName[ref] {
 }
 
 .TEIContainer::after{
-	content: "\a\aTest 5: Score images (Non-IIIF; one PNG, three JPGs)";
+	content: "\a\aTEST 6: Score images (Non-IIIF; one PNG, three JPGs)";
 	white-space:pre;
 	color:white;
 	font-weight: bold;
