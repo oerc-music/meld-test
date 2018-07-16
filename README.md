@@ -27,8 +27,9 @@ On a clean install of Ubuntu 18.04:
 
 Web server configuration:
 ----
-Running the application will start a webserver at localhost:8080 by default 
-(this can be changed in `package.json`). 
+Running the application will start a webserver at localhost:8080 by default. 
+This can be changed in `package.json`, by editing the line:
+ `"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --host localhost --port 8080"`
 The expected way to connect this to an externally visible website is through
 mappings handled by your usual webserver.
 
