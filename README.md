@@ -30,6 +30,20 @@ This will start a webserver at localhost:8080 by default
 The expected way to connect this to an externally visible website is through
 mappings handled by your usual webserver
 
+Expected outcome
+----------------
+When loaded in-browser, several media resources will be loaded:
+* Musical score for a string quartet rendered as SVG (from an MEI file)
+* Sample IIIF image in a Leaflet canvas
+* Two audio playback controls
+* One video player with controls
+* Some sample text rendered as HTML (from a TEI file)
+* Four images of musical score (PNG and JPG)
+
+To test the interaction handlers:
+* When clicking on the link labeled "[click to test score highlighting]", the first phrase for Violin I in the SVG score at the top of the page should be highlighted in blue.
+* Hovering the cursor over words underlined with squiggly lines should make additional descriptive text appear in definition boxes to the lower right of the screen. 
+
 Media playback issues in Ubuntu
 ---
 Note: Ubuntu 18.04 doesn't by default support mp3 playback in firefox. To enable, run:
