@@ -28,7 +28,9 @@ On a clean install of Ubuntu 18.04:
 Testing with self-hosted media resources
 -----
 * Download copies of the served resources above, plus the following RDF/JSON-LD files:
-* Change the URIs
+* Serve these
+* Change the URIs to match the new location
+
 
 
 Web server configuration:
