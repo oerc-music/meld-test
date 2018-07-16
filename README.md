@@ -37,7 +37,7 @@ mappings handled by your usual webserver.
 
 Expected outcome
 ----------------
-When loaded in-browser, you should see several media resources with TEST labels.
+When loaded in-browser, you should see 6 TEST labels, each attached to different media resources:
 
 * TEST 1: a sample IIIF image in a leaflet canvas
 * TEST 2: musical score for a string quartet rendered as SVG (from an MEI file, using Verovio)
