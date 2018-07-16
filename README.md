@@ -27,7 +27,7 @@ On a clean install of Ubuntu 18.04:
 
 Web server configuration:
 ----
-This will start a webserver at localhost:8080 by default 
+Running the application will start a webserver at localhost:8080 by default 
 (this can be changed in `package.json`). 
 The expected way to connect this to an externally visible website is through
 mappings handled by your usual webserver
