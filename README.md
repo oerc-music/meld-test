@@ -34,17 +34,20 @@ mappings handled by your usual webserver.
 
 Expected outcome
 ----------------
-When loaded in-browser, several media resources will be visible:
-* Musical score for a string quartet rendered as SVG (from an MEI file)
-* Sample IIIF image in a Leaflet canvas
-* Two audio playback controls
-* One video player with controls
-* Some sample text rendered as HTML (from a TEI file)
-* Four images of musical score (PNG and JPG)
+When loaded in-browser, you should see several media resources with TEST labels.
+
+* TEST 1: a sample IIIF image in a leaflet canvas
+* TEST 2: musical score for a string quartet rendered as SVG (from an MEI file, using Verovio)
+* TEST 3: a video player with controls (unstyled)
+* TEST 4: two audio players with controls
+* TEST 5: Some HTML-rendered text (from a TEI file, using CETEIcean)
+* TEST 6: Some non-IIIF images
 
 To test the interaction handlers:
-* When clicking on the link labeled "[click to test score highlighting]", the first phrase for Violin I in the SVG score at the top of the page should be highlighted in blue.
-* Hovering the cursor over words underlined with squiggly lines should make additional descriptive text appear in definition boxes to the lower right of the screen. 
+* Click on the "highlight" link in TEST 5 and check that it highlights the first phrase of the violin I part in TEST 2.
+* Hover the cursor over words underlined with squiggly lines in TEST 5 and check that it makes additional descriptive text appear in definition boxes to the lower right of the screen. 
+
+If all tests render, and the interactions work as described, you should be all set.
 
 Media playback issues in Ubuntu
 ---
