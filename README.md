@@ -1,6 +1,6 @@
 MELD Test application
 =====================
-This repository contains a test application employing [Music Encoding and Linked Data (MELD)](http://github.com/oerc-music/meld). The application drawns on Linked Data and resources published elsewhere to create an interactive web resource that could be embedded or linked to from a standard content management system. As such, the application requires network connectivity to function.
+This repository contains a test application employing [Music Encoding and Linked Data (MELD)](http://github.com/oerc-music/meld). The application drawns on Linked Data and resources published elsewhere to create an interactive web resource that could be embedded or linked to from a standard content management system. As such, *the application requires network connectivity to function*.
 
 Installing
 -----------
@@ -25,14 +25,16 @@ On a clean install of Ubuntu 18.04:
 * Run the application:
 `npm start`
 
-This will start a webserver at localhost:8080 by default 
-(this can be changed in `webpack.config.js`). 
+Web server configuration:
+----
+Running the application will start a webserver at localhost:8080 by default 
+(this can be changed in `package.json`). 
 The expected way to connect this to an externally visible website is through
-mappings handled by your usual webserver
+mappings handled by your usual webserver.
 
 Expected outcome
 ----------------
-When loaded in-browser, several media resources will be loaded:
+When loaded in-browser, several media resources will be visible:
 * Musical score for a string quartet rendered as SVG (from an MEI file)
 * Sample IIIF image in a Leaflet canvas
 * Two audio playback controls
