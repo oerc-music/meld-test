@@ -32,7 +32,7 @@ mappings handled by your usual webserver
 
 Expected outcome
 ----------------
-When loaded in-browser, several media resources will be loaded:
+When loaded in-browser, several media resources will be visible:
 * Musical score for a string quartet rendered as SVG (from an MEI file)
 * Sample IIIF image in a Leaflet canvas
 * Two audio playback controls
