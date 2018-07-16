@@ -39,12 +39,12 @@ Expected outcome
 ----------------
 When loaded in-browser, you should see 6 TEST labels, each attached to different media resources:
 
-* TEST 1: a sample IIIF image in a leaflet canvas
-* TEST 2: musical score for a string quartet rendered as SVG (from an MEI file, using Verovio)
-* TEST 3: a video player with controls (unstyled)
-* TEST 4: two audio players with controls
-* TEST 5: Some HTML-rendered text (from a TEI file, using CETEIcean)
-* TEST 6: Some non-IIIF images
+* TEST 1: a sample IIIF image in a leaflet canvas served from https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json
+* TEST 2: musical score for a string quartet rendered as SVG (from an MEI file, using Verovio) served from https://meld.linkedmusic.org/companion/mei/Late-Swallows-opening.mei
+* TEST 3: a video player with controls (unstyled) served from https://meld.linkedmusic.org/companion/audio/Late-Swallows-opening-vln1.mp4
+* TEST 4: two audio players with controls, served from https://meld.linkedmusic.org/companion/audio/Late-Swallows-Villiers-opening.mp3 and https://meld.linkedmusic.org/companion/audio/brigg-fair-p8.mp3
+* TEST 5: Some HTML-rendered text (from a TEI file, using CETEIcean) served from https://meld.linkedmusic.org/companion/audio/brigg-fair-p8.mp3
+* TEST 6: Some non-IIIF images served from https://meld.linkedmusic.org/companion/images/villiers-score.png, https://meld.linkedmusic.org/companion/images/brigg-fair-beecham-p8-i.jpg, https://meld.linkedmusic.org/companion/images/brigg-fair-beecham-p8-ii.jpg, and https://meld.linkedmusic.org/companion/images/ms_mus_1745!2!5_146v.jpg
 
 To test the interaction handlers:
 * Click on the "highlight" link in TEST 5 and check that it highlights the first phrase of the violin I part in TEST 2.
