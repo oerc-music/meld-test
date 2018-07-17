@@ -49,6 +49,8 @@ http://meld.linkedmusic.org/resources/test/meld-test-data.tgz
 
 * Change the URI basenames in `meld-test.json-ld`, `Late-Swallows.nq`, and `Brigg-Fair.nq` to point to your new location:
    - Replace `https://meld.linkedmusic.org/resources/test/` with `https://example.com/path/to/resources/` (substituting in your server's domain and resource path)
+ 
+* Update the graphUri specified at the TOP of `meld-test/src/containers/meldtest.js` to point to your server's copy of `meld-test.json-ld`
 
 
 
