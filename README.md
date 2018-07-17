@@ -27,7 +27,7 @@ On a clean install of Ubuntu 18.04:
 
 Testing with self-hosted media resources
 -----
-* Download copies of all media resources and Linked Data (RDF nquads and JSON-LD) files and place them in a web-accessible path on your server:
+1. Download copies of all media resources and Linked Data (RDF nquads and JSON-LD) files and place them in a web-accessible path on your server:
    - https://meld.linkedmusic.org/resources/test/Late-Swallows-opening.mei
    - https://meld.linkedmusic.org/resources/test/Late-Swallows-Villiers-opening.mp3
    - https://meld.linkedmusic.org/resources/test/brigg-fair-p8.mp3
@@ -45,14 +45,14 @@ OR, for convenience:
 * download and extract the following tarball which contains all of the resources listed above:
 http://meld.linkedmusic.org/resources/test/meld-test-data.tgz
 
-* Ensure your web server is configured so that the resources can be served from their new location
+2. Ensure your web server is configured so that the resources can be served from their new location
 
-* Change the URI basenames in `meld-test.json-ld`, `Late-Swallows.nq`, and `Brigg-Fair.nq` to point to your new location:
+3. Change the URI basenames in `meld-test.json-ld`, `Late-Swallows.nq`, and `Brigg-Fair.nq` to point to your new location:
    - Replace `https://meld.linkedmusic.org/resources/test/` with `https://example.com/path/to/resources/` (substituting in your server's domain and resource path)
  
-* Update the graphUri specified at the TOP of `meld-test/src/containers/meldtest.js` to point to your server's copy of `meld-test.json-ld`
+4. Update the graphUri specified at the TOP of `meld-test/src/containers/meldtest.js` to point to your server's copy of `meld-test.json-ld`
 
-
+**Note**: For debugging purposes, it may be useful to move media resources to self-hosting one at a time. The application is capable of serving media from both https://meld.linkedmusic.org and your server. To move only e.g. `brigg-fair-beecham-p8-ii.jpg` to self-hosting, update only all occurrences of https://meld.linkedmusic.org/resources/test/brigg-fair-beecham-p8-ii.jpg to https://example.com/path/to/resources/brigg-fair-beecham-p8-ii.jpg in step 4 above (while leaving the other resources unchanged until you are ready to transfer them to self-hosting).
 
 Web server configuration:
 ----
