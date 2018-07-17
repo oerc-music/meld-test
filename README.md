@@ -34,6 +34,7 @@ Testing with self-hosted media resources
    - https://meld.linkedmusic.org/resources/test/Late-Swallows-opening-vln1.mp4
    - https://meld.linkedmusic.org/resources/test/meld-test.tei
    - https://meld.linkedmusic.org/resources/test/villiers-score.png
+   - https://meld.linkedmusic.org/resources/test/brigg-fair-beecham-p8-i.jpg
    - https://meld.linkedmusic.org/resources/test/brigg-fair-beecham-p8-ii.jpg
    - https://meld.linkedmusic.org/resources/test/ms_mus_1745-2-5_146v.jpg
    - https://meld.linkedmusic.org/resources/test/Late-Swallows.nq
