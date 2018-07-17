@@ -1,6 +1,12 @@
+// IF SELF-HOSTING, UPDATE THE FOLLOWING URI TO POINT TO YOUR meld-test.json-ld 
+const graphUri = 'http://meld.linkedmusic.org/resources/test/meld-test.json-ld'
+//*****************************************************************************
+
+
 import React, { Component } from 'react';
 import { parse } from 'querystring';
 import App from './app';
+
 
 export default class MeldTest extends Component { 
 	constructor(props) {
@@ -30,7 +36,7 @@ export default class MeldTest extends Component {
 		return (
 		  <div> 
 		  	<link rel="stylesheet" href="../../style/MeldTest.css" type="text/css" />
-		  	<App graphUri="http://meld.linkedmusic.org/annotations/meld-test.json-ld" show={show} highlight={highlight}
+		  	<App graphUri={graphUri} show={show} highlight={highlight}
 			updateViewer={this.updateViewer.bind(this)} definition={this.state.definition}
 			currentDefinition={this.currentDefinition.bind(this)}
 			clearDefinition={this.clearDefinition.bind(this)}
