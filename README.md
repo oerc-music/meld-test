@@ -48,7 +48,7 @@ http://meld.linkedmusic.org/resources/test/meld-test-data.tgz
 * Ensure your web server is configured so that the resources can be served from their new location
 
 * Change the URI basenames in `meld-test.json-ld`, `Late-Swallows.nq`, and `Brigg-Fair.nq` to point to your new location:
-   - Replace `https://meld.linkedmusic.org/resources/test/` with `https://example.com/path/to/resources/`
+   - Replace `https://meld.linkedmusic.org/resources/test/` with `https://example.com/path/to/resources/` (substituting in your server's domain and resource path)
 
 
 
