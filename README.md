@@ -27,9 +27,24 @@ On a clean install of Ubuntu 18.04:
 
 Testing with self-hosted media resources
 -----
-* Download copies of the served resources above, plus the following RDF/JSON-LD files:
-* Serve these
-* Change the URIs to match the new location
+* Download copies of all media resources and Linked Data (RDF nquads and JSON-LD) files and place them in a web-accessible path on your server:
+   - https://meld.linkedmusic.org/resources/test/Late-Swallows-opening.mei
+   - https://meld.linkedmusic.org/resources/test/Late-Swallows-Villiers-opening.mp3
+   - https://meld.linkedmusic.org/resources/test/brigg-fair-p8.mp3
+   - https://meld.linkedmusic.org/resources/test/Late-Swallows-opening-vln1.mp4
+   - https://meld.linkedmusic.org/resources/test/meld-test.tei
+   - https://meld.linkedmusic.org/resources/test/villiers-score.png
+   - https://meld.linkedmusic.org/resources/test/brigg-fair-beecham-p8-ii.jpg
+   - https://meld.linkedmusic.org/resources/test/ms_mus_1745-2-5_146v.jpg
+   - https://meld.linkedmusic.org/resources/test/Late-Swallows.nq
+   - https://meld.linkedmusic.org/resources/test/Brigg-Fair.nq
+   - https://meld.linkedmusic.org/resources/test/meld-test.json-ld
+
+Or, for convenience, you can download and extract the following tarball which contains all of the resources listed above:
+http://meld.linkedmusic.org/resources/test/meld-test-data.tgz
+
+* Ensure your web server is configured so that the resources can be served from their new location
+* 
 
 
 
