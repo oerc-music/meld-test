@@ -40,11 +40,15 @@ Testing with self-hosted media resources
    - https://meld.linkedmusic.org/resources/test/Brigg-Fair.nq
    - https://meld.linkedmusic.org/resources/test/meld-test.json-ld
 
-Or, for convenience, you can download and extract the following tarball which contains all of the resources listed above:
+OR, for convenience: 
+
+* download and extract the following tarball which contains all of the resources listed above:
 http://meld.linkedmusic.org/resources/test/meld-test-data.tgz
 
 * Ensure your web server is configured so that the resources can be served from their new location
-* 
+
+* Change the URI basenames in `meld-test.json-ld`, `Late-Swallows.nq`, and `Brigg-Fair.nq` to point to your new location:
+   - Replace `https://meld.linkedmusic.org/resources/test/` with `https://your-server-here.example/path/to/resources/`
 
 
 
