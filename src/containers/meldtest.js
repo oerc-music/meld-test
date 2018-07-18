@@ -1,5 +1,5 @@
 // IF SELF-HOSTING, UPDATE THE FOLLOWING URI TO POINT TO YOUR meld-test.json-ld 
-const graphUri = 'http://meld.linkedmusic.org/resources/test/meld-test.json-ld'
+const graphUri = 'http://meld.linkedmusic.org/resources/test/meld-test-iiif.json-ld'
 //*****************************************************************************
 
 

@@ -127,7 +127,6 @@ class App extends Component {
 				<div className="wrapper">
 					<link rel="stylesheet" href="../style/style.css"/>
 					<link rel="stylesheet" href="../style/CETEIcean.css"/>
-					<IIIF url="https://stacks.stanford.edu/image/iiif/hg676jb4964%2F0380_796-44/info.json"/>
 					{ this.props.definition ?
 						<div id="defTarget"><h3>{this.props.definition.head}</h3><p>{this.props.definition.definition}</p></div>
 						: <div/> }
@@ -138,11 +137,13 @@ class App extends Component {
 						case MEIManifestation:
 							if(applies) {
 								return <Score key={ id } uri={ id } options={vrvOptions} annotations={ byId[id]["annotations"] } />;
-							} else break;;
+							} else break;
 						case TEIManifestation:
 							return <TEI key={ id } uri={ id } height={ stripHeight } width={this.state.width} annotations={ byId[id]["annotations"] }  updateViewer={ this.updateViewer.bind(this) }  highlight={ highlight } currentDefinition={ this.props.currentDefinition } clearDefinition={this.props.clearDefinition} annotation={ this.props.annotation }/>;
-						// case IIIFManifestation:
-						// 	return <IIIFImage key={ id } server={ id } height={ stripHeight } width={this.state.width} annotations={ byId[id]["annotations"] } />;
+						case IIIFManifestation:
+							if(applies) { 
+								return <IIIF key={ id } url={ id } />
+							} else break;
 						case VideoManifestation:
 							if(applies){
 								return <MediaPlayer key={ id } uri={ id } />;
@@ -160,13 +161,6 @@ class App extends Component {
 							} else {
 								break;
 							}
-/*						case IIIFManifestation:
-							if(applies) 
-								return <OpenSeaDragonContainer
-							server="https://stacks.stanford.edu/image/iiif"
-							key={ id } id="hg676jb4964%2F0380_796-44"
-							json="info.json" type={'legacy-image-pyramid'} />;*/
-							
 					}
 				})}
 				</div>
